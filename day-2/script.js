@@ -20,18 +20,21 @@ function partOneA () {
 // Try It!
 // Try it with a different number
 function partOneB () {
-  alert("Try it!");
+  // alert("Try it!");
   let answer, guess, guessNumber;
   answer = 3;
   guess = prompt("Guess a number between 1 and 10.");
   guessNumber = Number(guess);
 
   // 1. check if the number is equal to the answer
+  if (guessNumber === answer) {
 
     // 2. if it is, set the message for correct.
-
+    messageParagraph.innerHTML = `You guessed the number! It was ${answer}.`;
+  } else {
     // 3. if not, set the message for wrong guess.
-
+    messageParagraph.innerHTML = `You did not guess the number. Try again.`;
+  }
 }
 
 // Example
@@ -64,13 +67,17 @@ function partTwoB () {
   guessNumber = Number(guess);
 
   // 1. check if the number is too low.
+  if (guessNumber < answer) {
 
     // 2. if it is, set the message for too low.
-
+    messageParagraph.innerHTML = `You guessed too low. Try again.`;
+  } else if (guessNumber > answer) {
     // 3. if not, set the message for too high.
-
+    messageParagraph.innerHTML = `You guessed too high. Try again.`;
+  }else {
     // 4. if not, set the message for correct.
-
+   messageParagraph.innerHTML = `You guessed the number! It was ${answer}.`;
+  }
 }
 
 // Example
@@ -99,14 +106,19 @@ function partThreeB () {
   let color;
   color = prompt("What color describes your mood today?");
   // 1. check for your first color
+  if (color === "purple") {
 
     // 2. give the message for this color
+    messageParagraph.innerHTML = `Are you feeling relaxed today?`;
 
   // 3. check for the next color
-
+  } else if (color === "green") {
     // 4. give the message for the next color
-    
+    messageParagraph.innerHTML = `Are you feeling good today?`;
+  }else { 
   // 5. otherwise, ask for another color
+  messageParagraph.innerHTML = `Try another color.`;
+  }
 
 }
 
@@ -128,11 +140,33 @@ function partFourA () {
 
 // Try it!
 // Can you implement Rock Paper Scissors?
-// How many options are there?
+// How many options are there? There is 9 options.
 // NOTE: If you miss some of the options, that's OK. 
 // Try to catch as many as you can.
 function partFourB () {
-  alert("Try it!");
+  // alert("Try it!");
+  let player1, player2;
+  player1 = prompt("Player 1, choose rock, paper or scissors.");
+  player2 = prompt("Player 2, choose rock, paper or scissors.");
+  if (player1 === "rock" && player2 === "scissors") {
+    messageParagraph.innerHTML = "Player 1 Wins!!";
+  } else if (player1 === "paper" && player2 === "rock") {
+    messageParagraph.innerHTML = "Player 1 Wins!!";
+  } else if (player1 === "scissors" && player2 === "paper") {
+    messageParagraph.innerHTML = "Player 1 Wins!!";
+  } else if (player2 === "rock" && player1 === "scissors") {
+    messageParagraph.innerHTML = "Player 2 Wins!!";
+  } else if (player2 === "paper" && player1 === "rock") {
+    messageParagraph.innerHTML = "Player 2 Wins!!";
+  } else if (player2 === "scissors" && player1 === "paper") {
+    messageParagraph.innerHTML = "Player 2 Wins!!";
+  } else if (player1 === "scissors" && player2 === "scissors") {
+    messageParagraph.innerHTML = "It's a Draw!";
+  } else if (player1 === "rock" && player2 === "rock") {
+    messageParagraph.innerHTML = "It's a Draw!";
+  } else if (player1 === "paper" && player2 === "paper") {
+    messageParagraph.innerHTML = "It's a Draw!";
+  }
 
 }
 
