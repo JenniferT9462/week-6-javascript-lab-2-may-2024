@@ -52,7 +52,7 @@ function partTwoA () {
   // 3. calculate split bill
   split = bill/3;
   // 4. set the message
-  messageParagraph.innerHTML = `Your bill is $${bill}. Your part of the bill is $${split.toFixed(2)} among three friends.`;
+  messageParagraph.innerHTML = `Your bill is $${bill}. Your part of the bill is $${split.toFixed(2)} among <strong>three</strong> friends.`;
   
 }
 
@@ -70,7 +70,7 @@ function partTwoB () {
   split = billNumber/4;
 
   // 4. set the message
-  messageParagraph.innerHTML = `Your bill is $${bill}. Your part of the bill is $${split.toFixed(2)} among 4 friends.`;
+  messageParagraph.innerHTML = `Your bill is $${bill}. Your part of the bill is $${split.toFixed(2)} among <strong>four</strong> friends.`;
 }
 
 // Example
@@ -129,7 +129,7 @@ function splitBillByThree(x) {
   return x/3;
 }
 function messageForSplitBill(bill, split, count) {
-  return `Your bill is $${bill}. Your part of the bill is $${split.toFixed(2)} among ${count} friends.`
+  return `Your bill is $${bill}. Your part of the bill is $${split.toFixed(2)} among <strong>${count}</strong> friends.`
 }
 function partFourA () {
   let bill, billNumber, split, message;
