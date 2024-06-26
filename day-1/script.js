@@ -15,7 +15,7 @@ function partOneA () {
   tip = billNumber * .10;
 
   // 4. set the message
-  messageParagraph.innerHTML = `Your bill is $${bill}. Your tip is $${tip} at 10%.`
+  messageParagraph.innerHTML = `Your bill is $${bill}. Your tip is $${tip.toFixed(2)} at 10%.`
   
 }
 
@@ -36,7 +36,7 @@ function partOneB () {
   tip = billNumber * .20;
 
   // 4. set the message
-  messageParagraph.innerHTML = `Your bill is $${bill}. Your tip is $${tip} at 20%.`;
+  messageParagraph.innerHTML = `Your bill is $${bill}. Your tip is $${tip.toFixed(2)} at 20%.`;
   
 }
 
@@ -52,7 +52,7 @@ function partTwoA () {
   // 3. calculate split bill
   split = bill/3;
   // 4. set the message
-  messageParagraph.innerHTML = `Your bill is $${bill}. Your part of the bill is $${split} among three friends.`;
+  messageParagraph.innerHTML = `Your bill is $${bill}. Your part of the bill is $${split.toFixed(2)} among three friends.`;
   
 }
 
@@ -70,7 +70,7 @@ function partTwoB () {
   split = billNumber/4;
 
   // 4. set the message
-  messageParagraph.innerHTML = `Your bill is $${bill}. Your part of the bill is $${split} among 4 friends.`;
+  messageParagraph.innerHTML = `Your bill is $${bill}. Your part of the bill is $${split.toFixed(2)} among 4 friends.`;
 }
 
 // Example
@@ -81,7 +81,7 @@ function tenPercentTip(x) {
 }
 // This is function that takes the tip and bill as arguments and creates a message for the user about what should be tipped.
 function tipMessage(tip, bill, tipRate) {
-  return `Your bill is $${bill}. Your should tip $${tip}  at ${tipRate} percent.`
+  return `Your bill is $${bill}. Your should tip $${tip.toFixed(2)}  at ${tipRate} percent.`
 }
 function partThreeA () {
   let bill, billNumber, tip, message;
@@ -129,7 +129,7 @@ function splitBillByThree(x) {
   return x/3;
 }
 function messageForSplitBill(bill, split, count) {
-  return `Your bill is $${bill}. Your part of the bill is $${split} among ${count} friends.`
+  return `Your bill is $${bill}. Your part of the bill is $${split.toFixed(2)} among ${count} friends.`
 }
 function partFourA () {
   let bill, billNumber, split, message;
