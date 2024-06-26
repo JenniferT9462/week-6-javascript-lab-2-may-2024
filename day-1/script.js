@@ -139,7 +139,7 @@ function partFourA () {
   billNumber = Number(bill);
 
   // 3. use a function to calculate the split
-  split = splitBillByThree(billNumber);
+  split = splitBillByN(billNumber, 3);
   // 4. use a function to create the message
   message = messageForSplitBill(bill, split, "three");
 
@@ -163,7 +163,7 @@ function partFourB () {
   billNumber = Number(bill);
 
   // 3. use a function to calculate the split
-  split = splitBillByFour(billNumber);
+  split = splitBillByN(billNumber, 4);
 
   // 4. use a function to create the message
   message = messageForSplitBill(bill, split, "four");
@@ -175,4 +175,8 @@ function partFourB () {
 // Bonus: Create a splitBillByN function that will take two arguments, the bill and n. N is the number of friends splitting.
 // Then use the splitBillByN in part 4 A and B instead of splitBillByThree and splitBillByFour.
 // Think about how functions and arguments can make your code more flexible and ready to take on new requirements. (For example, can you make it split bill by 8 or 10 friends? How does splitBillByN help?)
+function splitBillByN(bill, n) {
+    let splitCheck =  bill/n;
+    return splitCheck;
+}
 
