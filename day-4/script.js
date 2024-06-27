@@ -15,11 +15,13 @@ function partOneA () {
 // Try It!
 // Create a loop with a different high number
 function partOneB () {
-  alert("Try it!");
+  // alert("Try it!");
+  let highNumber = 8;
   // 1. Create a for loop.
-
+  for (let i = 0; i < highNumber; i++) {
     // 2. give the user and alert with the current number.
-
+    alert(`The number is ${i}`);
+  }
 }
 
 // Example
