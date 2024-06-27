@@ -160,12 +160,11 @@ function partFourB () {
     messageParagraph.innerHTML = "Player 2 Wins!!";
   } else if (player2 === "scissors" && player1 === "paper") {
     messageParagraph.innerHTML = "Player 2 Wins!!";
-  } else if (player1 === "scissors" && player2 === "scissors") {
-    messageParagraph.innerHTML = "It's a Draw!";
-  } else if (player1 === "rock" && player2 === "rock") {
-    messageParagraph.innerHTML = "It's a Draw!";
-  } else if (player1 === "paper" && player2 === "paper") {
-    messageParagraph.innerHTML = "It's a Draw!";
+  } else if (player1 === player2) {
+    messageParagraph.innerHTML = "It's a Draw!"
+  }
+  else {
+    messageParagraph.innerHTML = "You didn't enter a valid choice.";
   }
 
 }
