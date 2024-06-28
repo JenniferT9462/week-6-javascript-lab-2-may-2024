@@ -140,7 +140,7 @@ function partFourA () {
 
 // Try it!
 // Can you implement Rock Paper Scissors?
-// How many options are there? There is 9 options.
+// How many options are there? There is 9 options without shortcut...7 with shortcut
 // NOTE: If you miss some of the options, that's OK. 
 // Try to catch as many as you can.
 function partFourB () {
