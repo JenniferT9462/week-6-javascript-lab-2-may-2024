@@ -63,8 +63,7 @@ function partTwoB () {
   // 1. prompt for the bill
   bill = prompt("What is the amount of your bill?");
 
-
-  // 2. convert it to number
+ // 2. convert it to number
   billNumber = Number(bill);
   // 3. calculate split bill
   split = billNumber/4;
@@ -178,7 +177,5 @@ function partFourB () {
 
 // It helps make the split bill more versatile. It can now calculate for any number. 
 function splitBillByN(bill, n) {
-    let splitCheck =  bill/n;
-    return splitCheck;
+     return bill/n;
 }
-

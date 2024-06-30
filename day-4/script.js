@@ -145,10 +145,10 @@ function partFourB () {
   messageParagraph.innerHTML = "Flavors";
 
   // 5. Get the exact length of the array
-  highNumber = flavors.length;
+  // highNumber = flavors.length;
 
   // 6. write all the flavors back to the HTML list from the array, updated with our new flavor.
-  for (let i = 0; i < highNumber; i++) {
+  for (let i = 0; i < flavors.length; i++) {
     messageList.innerHTML += `<li>${flavors[i]}</li>`;
   }
 
